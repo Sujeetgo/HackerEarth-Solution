@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+const long long int M = 1e9+7;
+int product(int arr[], int n){
+	long int mul = 1;
+	for( int i = 0; i < n; i++){
+		mul = (mul*arr[i])%M;
+	}
+	return mul;
+
+}
+int main() {
+    int n;
+	cin>>n;
+    int arr[n];
+	for(int i = 0; i< n; i++){
+		cin>>arr[i];
+		cout<<" ";
+	}
+	cout<<product(arr, n);
+
+
+}
