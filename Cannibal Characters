@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int Minimum_Operations (int n, string s) {
+   // Write your code here
+   int sum =0;
+   int arr[26] ={0};
+   for(int i =0; i<n; i++){
+       arr[s[i]-'a']++;
+   }
+   for(int i =0; i<26; i++){
+       sum +=arr[i]/2;
+   }
+   return sum;
+   
+}
+
+int main() {
+
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        string s;
+        cin>>s;
+        cout<<Minimum_Operations(n, s);
+    }
+    return 0;
+}
