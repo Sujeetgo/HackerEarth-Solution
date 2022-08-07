@@ -1,0 +1,42 @@
+/*#include<bits/stdc++.h>
+using namespace std;
+int last_move = 0;
+char solve (vector<string> Number) {
+   // Return character A from this function if player A is winner. Return
+   // character B from this function if player B is winner. Also set the
+   // value of global variable last_move to the last move number of the
+   // player who is winner in the game
+}
+
+int main() {
+
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int N;
+    cin >> N;
+    vector<string> Number(N);
+    for(int i_Number=0; i_Number<N; i_Number++)
+    {
+    	cin >> Number[i_Number];
+    }
+
+    char out_;
+    out_ = solve(Number);
+    cout << out_ << endl;
+    cout << last_move << endl;
+
+}*/
+#include<bits/stdc++.h>
+using namespace std;
+const int MX = 1e6;
+
+int main(){
+  ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+  string n(MX,'0');
+  int t; cin>>t; while(t--){
+    string str; cin>>str; for(int i=0;i<str.size();++i) if(str[i]=='1') n[i]='1';
+  }
+  int res = count(n.begin(),n.end(),'1');
+  (res&1)?cout<<"A"<<endl<<res<<endl:cout<<"B"<<endl<<res<<endl;
+  return 0;
+}
